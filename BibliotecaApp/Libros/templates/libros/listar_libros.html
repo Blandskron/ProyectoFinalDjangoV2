@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Libros</title>
+</head>
+<body>
+    <h1>Listado de Libros</h1>
+    <ul>
+        {% for libro in libros %}
+            <li>{{ libro.titulo }} - {{ libro.autor.nombre }} - {{ libro.genero }} - {{ libro.año_publicacion }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_libro' %}">Agregar Libro</a>
+</body>
+</html>
